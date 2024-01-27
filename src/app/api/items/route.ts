@@ -1,11 +1,10 @@
-import { promises as fs } from 'fs';
+import { DATABASE_URL } from '@/constants';
+
+export const dynamic = 'force-dynamic';
 
 export async function GET(request: Request) {
-  const file = await fs.readFile(
-    process.cwd() + '/src/app/api/db.json',
-    'utf8'
-  );
-  const data = JSON.parse(file);
+  const res = await fetch(DATABASE_URL);
+  const data = await res.json();
 
   return Response.json(data);
 }

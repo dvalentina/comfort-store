@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Wooden Speaker",
+    "images": [
+      "assets/items/wooden_speaker_1.jpg",
+      "assets/items/wooden_speaker_2.jpg"
+    ],
+    "available_qty": 98,
+    "priceUSD": 119.0,
+    "colors": ["brown"],
+    "tags": ["tech"],
+    "sale": false,
+    "salePriceUSD": null
+  }
+]

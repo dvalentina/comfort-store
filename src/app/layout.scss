@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'body'
+    'footer';
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  box-sizing: border-box;
+  padding: 0 24px;
+
+  &__header {
+    grid-area: header;
+  }
+
+  &__body {
+    grid-area: body;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+  }
+
+  &__footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+  }
+}

@@ -1,6 +1,5 @@
 import { DATABASE_URL } from '@/constants';
 import { IItem } from '@/types';
-import { promises as fs } from 'fs';
 
 export const dynamic = 'force-dynamic';
 

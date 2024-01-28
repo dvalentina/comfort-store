@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+$poppins: 'Poppins', sans-serif;
+$bold: '700';
+$semi-bold: '600';
+$regular: '400';
+
+// headline
+
+@mixin headline-large {
+  font-family: $poppins;
+  font-size: 44px;
+  font-weight: $bold;
+  line-height: 56px;
+}
+
+@mixin headline-medium {
+  font-family: $poppins;
+  font-size: 32px;
+  font-weight: $bold;
+  line-height: 44px;
+}
+
+@mixin headline-small {
+  font-family: $poppins;
+  font-size: 24px;
+  font-weight: $bold;
+  line-height: 32px;
+}
+
+// title
+
+@mixin title-large {
+  font-family: $poppins;
+  font-size: 34px;
+  font-weight: $semi-bold;
+  line-height: 40px;
+}
+
+@mixin title-medium {
+  font-family: $poppins;
+  font-size: 24px;
+  font-weight: $semi-bold;
+  line-height: 32px;
+}
+
+@mixin title-small {
+  font-family: $poppins;
+  font-size: 20px;
+  font-weight: $semi-bold;
+  line-height: 24px;
+}
+
+// label
+
+@mixin label-large {
+  font-family: $poppins;
+  font-size: 20px;
+  font-weight: $semi-bold;
+  line-height: 24px;
+}
+
+@mixin label-medium {
+  font-family: $poppins;
+  font-size: 16px;
+  font-weight: $semi-bold;
+  line-height: 20px;
+}
+
+@mixin label-small {
+  font-family: $poppins;
+  font-size: 14px;
+  font-weight: $semi-bold;
+  line-height: 16px;
+}
+
+// body
+
+@mixin body-large {
+  font-family: $poppins;
+  font-size: 16px;
+  font-weight: $regular;
+  line-height: 24px;
+}
+
+@mixin body-medium {
+  font-family: $poppins;
+  font-size: 14px;
+  font-weight: $regular;
+  line-height: 20px;
+}
+
+@mixin body-small {
+  font-family: $poppins;
+  font-size: 12px;
+  font-weight: $regular;
+  line-height: 16px;
+}

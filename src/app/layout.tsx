@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import '@/app/layout.scss';
-import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 
 export const metadata: Metadata = {
@@ -21,9 +20,6 @@ export default function RootLayout({
             <Header />
           </div>
           <div className='grid__body'>{children}</div>
-          <div className='grid__footer'>
-            <Footer />
-          </div>
         </div>
       </body>
     </html>

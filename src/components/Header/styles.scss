@@ -25,42 +25,42 @@
     position: absolute;
     right: 0;
   }
-}
 
-.logo {
-  @include base.flex-center;
-  @include base.reset-link;
-  @include typography.logo;
+  .logo {
+    @include base.flex-center;
+    @include base.reset-link;
+    @include typography.logo;
 
-  height: 100%;
-  padding: 4px 40px 0 40px;
-  box-sizing: border-box;
+    height: 100%;
+    padding: 4px 40px 0 40px;
+    box-sizing: border-box;
 
-  color: colors.$space-cadet;
-}
-
-.link {
-  @include base.flex-center;
-  @include base.reset-link;
-  @include typography.label-small;
-
-  height: 100%;
-  padding: 0 20px;
-  box-sizing: border-box;
-
-  color: colors.$space-cadet;
-  text-transform: uppercase;
-}
-
-.cart {
-  @include base.flex-center;
-
-  width: 105px;
-  height: 100%;
-  border-left: 1px solid colors.$french-grey;
-  box-sizing: border-box;
-
-  &__icon {
     color: colors.$space-cadet;
+  }
+
+  .link {
+    @include base.flex-center;
+    @include base.reset-link;
+    @include typography.label-small;
+
+    height: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    color: colors.$space-cadet;
+    text-transform: uppercase;
+  }
+
+  .cart {
+    @include base.flex-center;
+
+    width: 105px;
+    height: 100%;
+    border-left: 1px solid colors.$french-grey;
+    box-sizing: border-box;
+
+    &__icon {
+      color: colors.$space-cadet;
+    }
   }
 }

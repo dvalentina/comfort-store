@@ -1,0 +1,36 @@
+@use 'src/styles/typography';
+@use 'src/styles/colors';
+
+.about {
+  display: flex;
+  gap: 40px;
+
+  &__left {
+    position: relative;
+    width: 300px;
+    height: auto;
+  }
+
+  .image {
+    object-fit: contain;
+  }
+
+  .headline {
+    @include typography.headline-large;
+    color: colors.$space-cadet;
+  }
+
+  .text {
+    @include typography.body-large;
+    color: colors.$space-cadet;
+  }
+
+  .title {
+    @include typography.title-large;
+    color: colors.$space-cadet;
+  }
+
+  .link {
+    color: colors.$space-cadet;
+  }
+}

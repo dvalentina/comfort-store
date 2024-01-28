@@ -1,9 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Cambay:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 $poppins: 'Poppins', sans-serif;
-$bold: '700';
-$semi-bold: '600';
-$regular: '400';
+$cambay: 'Cambay', sans-serif;
+$bold: 700;
+$semi-bold: 600;
+$regular: 400;
+
+// logo
+
+@mixin logo {
+  font-family: $cambay;
+  font-size: 24px;
+  font-weight: $bold;
+}
 
 // headline
 

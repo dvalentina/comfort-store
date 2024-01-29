@@ -2,12 +2,13 @@
   {
     "id": 1,
     "name": "Wooden Speaker",
+    "description": "The gently curved lines accentuated by sewn details are kind to your body and pleasant to look at. Also, there’s a tilt and height-adjusting mechanism that’s built to outlast years of ups and downs.",
     "images": [
       "assets/items/wooden_speaker_1.jpg",
       "assets/items/wooden_speaker_2.jpg"
     ],
     "available_qty": 98,
-    "priceUSD": 119.0,
+    "priceUSD": 119.99,
     "colors": ["brown"],
     "tags": ["tech"],
     "sale": false,

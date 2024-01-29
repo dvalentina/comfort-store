@@ -1,0 +1,49 @@
+@use '/src/styles/colors';
+@use '/src/styles/typography';
+@use '/src/styles/base';
+
+.counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 160px;
+  height: 52px;
+  border: 1px solid colors.$cool-grey;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 16px;
+
+  .count {
+    @include typography.label-large;
+    color: colors.$space-cadet;
+
+    &--disabled {
+      color: colors.$cool-grey;
+    }
+  }
+
+  .icon-button {
+    @include base.reset-button;
+    @include base.flex-center;
+
+    &:enabled:hover {
+      background: rgba(120, 120, 120, 0.2);
+      border-radius: 2px;
+    }
+
+    &:enabled:active {
+      background: rgba(120, 120, 120, 0.3);
+      border-radius: 2px;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      color: colors.$cool-grey;
+    }
+
+    &__icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

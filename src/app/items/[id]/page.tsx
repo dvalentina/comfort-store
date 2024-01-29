@@ -1,29 +1,28 @@
 'use client';
 
 import useItem from '@/hooks/useItem';
+import './styles.scss';
 
 function ItemPage({ params }: { params: { id: string } }) {
   const { id } = params;
 
   const { item, isLoading, isError } = useItem({ id });
 
-  console.log(item);
   if (!item) {
     return <p>loading...</p>;
   }
 
   return (
-    <>
-      <p>Id: {item.id}</p>
-      <p>Name: {item.name}</p>
-      <p>Images: {...item.images}</p>
-      <p>Available Q-ty: {item.available_qty}</p>
-      <p>Price, USD: {item.priceUSD}</p>
-      <p>Colors: {...item.colors}</p>
-      <p>Tags: {...item.tags}</p>
-      <p>Sale: {item.sale ? 'yes' : 'no'}</p>
-      <p>Sale price, USD: {item.salePriceUSD ? item.salePriceUSD : 'none'}</p>
-    </>
+    <div className='item-page'>
+      <div className='item-page__left'>
+        <h1 className='item-title item-page__item-title'>{item.name}</h1>
+        <h4 className='item-price'>${item.priceUSD}</h4>
+        <p className='item-description'>{item.description}</p>
+        <p className='item-shipping'>
+          Free 3-5 day shipping • Tool-free assembly • 30-day trial
+        </p>
+      </div>
+    </div>
   );
 }
 

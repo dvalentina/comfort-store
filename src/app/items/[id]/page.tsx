@@ -1,7 +1,8 @@
 'use client';
 
-import useItem from '@/hooks/useItem';
 import './styles.scss';
+
+import useItem from '@/hooks/useItem';
 
 function ItemPage({ params }: { params: { id: string } }) {
   const { id } = params;

@@ -1,4 +1,5 @@
 import './styles.scss';
+
 import Image from 'next/image';
 
 function AboutPage() {

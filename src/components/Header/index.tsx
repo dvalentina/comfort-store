@@ -1,6 +1,7 @@
 import './styles.scss';
-import Link from 'next/link';
+
 import Image from 'next/image';
+import Link from 'next/link';
 
 function Header() {
   return (

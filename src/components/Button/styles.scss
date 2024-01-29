@@ -1,0 +1,96 @@
+@use '/src/styles/base';
+@use '/src/styles/colors';
+@use '/src/styles/typography';
+
+.button {
+  @include base.reset-button;
+  @include base.flex-center;
+  gap: 16px;
+  padding: 0 40px;
+  height: 52px;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &--filled {
+    border: 1px solid colors.$verdigris;
+    background: colors.$verdigris;
+    color: colors.$white;
+
+    &:enabled:hover {
+      background: darken(colors.$verdigris, 5);
+    }
+
+    &:enabled:active {
+      background: darken(colors.$verdigris, 10);
+    }
+
+    &:disabled {
+      border: 1px solid colors.$cool-grey;
+      background: colors.$cool-grey;
+    }
+  }
+
+  &--outline {
+    border: 1px solid colors.$space-cadet;
+    color: colors.$space-cadet;
+    background: colors.$white;
+
+    &:enabled:hover {
+      background: darken(colors.$white, 5);
+    }
+
+    &:enabled:active {
+      background: darken(colors.$white, 10);
+    }
+
+    &:disabled {
+      border: 1px solid colors.$cool-grey;
+      color: colors.$cool-grey;
+    }
+  }
+
+  &--link {
+    height: auto;
+    padding: 2px 4px;
+    color: colors.$verdigris;
+
+    &:enabled:hover {
+      background: darken(colors.$white, 5);
+    }
+
+    &:enabled:active {
+      background: darken(colors.$white, 10);
+    }
+
+    &:disabled {
+      color: colors.$cool-grey;
+    }
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--no-label {
+    padding: 0;
+    width: 52px;
+  }
+
+  &--no-label#{&}--link {
+    padding: 2px 4px;
+    width: auto;
+  }
+
+  .button-label {
+    @include typography.label-medium;
+  }
+
+  .button-icon {
+    width: 24px;
+    height: 24px;
+  }
+}

@@ -1,16 +1,23 @@
 import './styles.scss';
 
+import { useEffect } from 'react';
+
 import { ReactComponent as MinusIcon } from '../../../public/assets/icons/minus.svg';
 import { ReactComponent as PlusIcon } from '../../../public/assets/icons/plus.svg';
 
-interface ICounter {
-  count?: number;
+export interface ICounter {
+  count: number;
   maxCount: number;
   handleChange: (newCount: number) => void;
-  disabled: boolean;
+  disabled?: boolean;
 }
 
-function Counter({ count = 1, maxCount, handleChange, disabled }: ICounter) {
+function Counter({
+  count,
+  maxCount,
+  handleChange,
+  disabled = false,
+}: ICounter) {
   const handleDecrement = () => {
     const newCount = count - 1;
     if (newCount < 1) {
@@ -27,20 +34,36 @@ function Counter({ count = 1, maxCount, handleChange, disabled }: ICounter) {
     handleChange(count + 1);
   };
 
+  useEffect(() => {
+    if (count > maxCount && maxCount > 0) {
+      handleChange(maxCount);
+    }
+    if (maxCount <= 0 || count < 0) {
+      handleChange(0);
+    }
+    if (count === 0 && maxCount > 0) {
+      handleChange(1);
+    }
+  }, [maxCount, count]);
+
+  const counterDisabled = disabled || maxCount <= 0;
+
   return (
     <div className='counter'>
       <button
         className='icon-button'
         onClick={handleDecrement}
-        disabled={count === 1 || disabled}
+        disabled={count <= 1 || counterDisabled}
       >
         <MinusIcon className='icon-button__icon' />
       </button>
-      <p className={`count ${disabled ? 'count--disabled' : ''}`}>{count}</p>
+      <p className={`count ${counterDisabled ? 'count--disabled' : ''}`}>
+        {count}
+      </p>
       <button
         className='icon-button'
         onClick={handleIncrement}
-        disabled={count === maxCount || disabled}
+        disabled={count === maxCount || counterDisabled}
       >
         <PlusIcon className='icon-button__icon' />
       </button>

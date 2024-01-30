@@ -1,42 +1,68 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { useEffect, useState } from 'react';
 
 import Counter from '.';
+import { ICounter } from '.';
 
-const meta = {
+const meta: Meta<typeof Counter> = {
   component: Counter,
   title: 'Counter',
   tags: ['autodocs'],
-} satisfies Meta<typeof Counter>;
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Counter>;
+
+const CounterWithHooks = ({
+  count: outerCount = 1,
+  maxCount,
+  disabled = false,
+}: {
+  count?: number;
+  maxCount: number;
+  disabled?: boolean;
+}) => {
+  const [count, setCount] = useState(outerCount);
+
+  const handleCountChange = (newCount: number) => {
+    setCount(newCount);
+  };
+
+  useEffect(() => {
+    setCount(outerCount);
+  }, [outerCount]);
+
+  return (
+    <Counter
+      count={count}
+      handleChange={handleCountChange}
+      maxCount={maxCount}
+      disabled={disabled}
+    />
+  );
+};
 
 export const Default: Story = {
   args: {
     count: 1,
-    maxCount: 98,
-    handleChange: () => {},
+    maxCount: 12,
     disabled: false,
+    handleChange: () => {},
   },
+  render: ({ ...args }) => <CounterWithHooks {...args} />,
 };
 
 export const Disabled: Story = {
-  args: {
-    ...Default.args,
-    disabled: true,
-  },
+  args: { ...Default.args },
+  render: ({ ...args }) => <CounterWithHooks {...args} disabled={true} />,
 };
 
 export const MaximumCount: Story = {
-  args: {
-    ...Default.args,
-    count: Default.args.maxCount,
-  },
+  args: { ...Default.args },
+  render: ({ ...args }) => <CounterWithHooks {...args} count={12} />,
 };
 
 export const MinimumCount: Story = {
-  args: {
-    ...Default.args,
-    count: 1,
-  },
+  args: { ...Default.args },
+  render: ({ ...args }) => <CounterWithHooks {...args} count={1} />,
 };

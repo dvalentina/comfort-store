@@ -1,0 +1,108 @@
+@use '/src/styles/typography';
+@use '/src/styles/colors';
+
+.typography {
+  font-family: typography.$poppins;
+
+  &__headline {
+    font-weight: typography.$bold;
+
+    &--large {
+      font-size: 44px;
+      line-height: 56px;
+    }
+
+    &--medium {
+      font-size: 32px;
+      line-height: 44px;
+    }
+
+    &--small {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  &__title {
+    font-weight: typography.$semi-bold;
+
+    &--large {
+      font-size: 34px;
+      line-height: 40px;
+    }
+
+    &--medium {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &--small {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__label {
+    font-weight: typography.$semi-bold;
+
+    &--large {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &--medium {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &--small {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__body {
+    font-weight: typography.$regular;
+
+    &--large {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &--medium {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &--small {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  // colors
+
+  &--primary {
+    color: colors.$space-cadet;
+  }
+
+  &--secondary {
+    color: colors.$cool-grey;
+  }
+
+  &--success {
+    color: colors.$verdigris;
+  }
+
+  &--warning {
+    color: colors.$mikado-yellow;
+  }
+
+  &--error {
+    color: colors.$imperial-red;
+  }
+
+  &--white {
+    color: colors.$white;
+  }
+}

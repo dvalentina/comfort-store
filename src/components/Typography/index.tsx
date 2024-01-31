@@ -1,6 +1,6 @@
 import './styles.scss';
 
-interface ITypography {
+export interface ITypography {
   children?: React.ReactNode;
   role?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
   type?: 'headline' | 'title' | 'label' | 'body';

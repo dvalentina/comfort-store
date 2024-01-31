@@ -1,0 +1,34 @@
+@use '/src/styles/colors';
+
+.stories-typography {
+  border: 1px solid colors.$french-grey;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__item:not(:last-child) {
+    border-bottom: 1px solid colors.$french-grey;
+  }
+
+  .item {
+    display: flex;
+  }
+
+  .details {
+    background: rgba(colors.$french-grey, 0.3);
+    width: 320px;
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .representation {
+    width: 880px;
+    padding: 26px 48px;
+    display: flex;
+    align-items: center;
+  }
+}

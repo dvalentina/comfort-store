@@ -2,6 +2,9 @@
 @use '/src/styles/colors';
 
 .typography {
+  margin: 0;
+  padding: 0;
+
   font-family: typography.$poppins;
 
   &__headline {

@@ -6,7 +6,7 @@ import { ICounter } from '.';
 
 const meta: Meta<typeof Counter> = {
   component: Counter,
-  title: 'Counter',
+  title: 'Components/Counter',
   tags: ['autodocs'],
 };
 

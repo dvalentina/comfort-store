@@ -1,0 +1,28 @@
+import { Story, Meta } from '@storybook/blocks';
+
+import * as ColorsStories from './Colors.stories';
+import './styles.scss';
+
+<Meta of={ColorsStories} />
+
+# Primary Colors
+
+<div className='colors-docs-container'>
+  <Story of={ColorsStories.Verdigris} />
+</div>
+
+# Secondary Colors
+
+<div className='colors-docs-container'>
+  <Story of={ColorsStories.MikadoYellow} />
+  <Story of={ColorsStories.ImperialRed} />
+</div>
+
+# Neutral Colors
+
+<div className='colors-docs-container'>
+  <Story of={ColorsStories.SpaceCadet} />
+  <Story of={ColorsStories.CoolGrey} />
+  <Story of={ColorsStories.FrenchGrey} />
+  <Story of={ColorsStories.White} />
+</div>

@@ -1,0 +1,60 @@
+@use '/src/styles/colors';
+
+.color-item {
+  display: flex;
+  flex-direction: column;
+  height: 210px;
+  width: 240px;
+  border-radius: 16px;
+  border: 1px solid colors.$french-grey;
+  overflow: hidden;
+
+  &__color-details {
+    margin-top: auto;
+  }
+
+  .color-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-top: 1px solid colors.$french-grey;
+    box-sizing: border-box;
+    background: colors.$white;
+  }
+
+  &--verdigris {
+    background: colors.$verdigris;
+  }
+
+  &--mikado-yellow {
+    background: colors.$mikado-yellow;
+  }
+
+  &--imperial-red {
+    background: colors.$imperial-red;
+  }
+
+  &--space-cadet {
+    background: colors.$space-cadet;
+  }
+
+  &--cool-grey {
+    background: colors.$cool-grey;
+  }
+
+  &--french-grey {
+    background: colors.$french-grey;
+  }
+
+  &--white {
+    background: colors.$white;
+  }
+}
+
+.colors-docs-container {
+  display: flex;
+  gap: 48px;
+  margin-top: 24px !important;
+  margin-bottom: 60px !important;
+}

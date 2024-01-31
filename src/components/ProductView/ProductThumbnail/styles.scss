@@ -1,0 +1,24 @@
+@use '/src/styles/colors';
+
+.product-thumbnail {
+  height: 104px;
+  width: 104px;
+  box-sizing: border-box;
+  border: 2px solid colors.$french-grey;
+  border-radius: 5px;
+  background: colors.$white;
+  position: relative;
+
+  &:hover {
+    border: 2px solid colors.$verdigris;
+    cursor: pointer;
+  }
+
+  .image {
+    object-fit: contain;
+  }
+
+  &--active {
+    border: 2px solid colors.$verdigris;
+  }
+}

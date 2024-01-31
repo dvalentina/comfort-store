@@ -1,0 +1,10 @@
+@use '/src/styles/colors';
+
+.arrows {
+  display: flex;
+  gap: 80px;
+
+  button {
+    color: colors.$space-cadet;
+  }
+}

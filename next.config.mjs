@@ -22,6 +22,13 @@ const nextConfig = {
 
     return config;
   },
+  images: {
+    domains: [
+      'localhost',
+      'comfort-store-storybook.vercel.app',
+      'comfort-store-xi.vercel.app',
+    ],
+  },
 };
 
 export default nextConfig;

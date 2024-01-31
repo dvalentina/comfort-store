@@ -1,0 +1,9 @@
+.number-view {
+  display: flex;
+  gap: 11px;
+  align-items: baseline;
+
+  .number {
+    width: 40px;
+  }
+}

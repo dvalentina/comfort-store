@@ -4,7 +4,7 @@ import ProductView from '.';
 
 const meta = {
   component: ProductView,
-  title: 'Components/Product View/Product View',
+  title: 'Components/Product View',
   tags: ['autodocs'],
 } satisfies Meta<typeof ProductView>;
 

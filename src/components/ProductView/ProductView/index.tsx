@@ -17,7 +17,7 @@ function ProductView({ imageURLs }: { imageURLs: string[] }) {
 
   const handleChange = (newActiveImageURL: string) => {
     setActiveImageURL(newActiveImageURL);
-    setActiveIndex(imageURLs.indexOf(activeImageURL));
+    setActiveIndex(imageURLs.indexOf(newActiveImageURL));
   };
 
   const handleClickNext = () => {

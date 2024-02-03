@@ -2,11 +2,11 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import Arrows from '.';
 
-const meta = {
+const meta: Meta<typeof Arrows> = {
   component: Arrows,
-  title: 'Components/Product View/Arrows',
+  title: 'Components: Organisms/Product View/Arrows',
   tags: ['autodocs'],
-} satisfies Meta<typeof Arrows>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

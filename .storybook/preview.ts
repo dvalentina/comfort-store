@@ -11,7 +11,7 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['Tokens', 'Components'],
+        order: ['Tokens', 'Components: Atoms', 'Components: Molecules'],
       },
     },
   },

@@ -3,11 +3,11 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ReactComponent as PlusIcon } from '../../../public/assets/icons/plus.svg';
 import Button from '.';
 
-const meta = {
+const meta: Meta<typeof Button> = {
   component: Button,
-  title: 'Components/Button',
+  title: 'Components: Atoms/Button',
   tags: ['autodocs'],
-} satisfies Meta<typeof Button>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

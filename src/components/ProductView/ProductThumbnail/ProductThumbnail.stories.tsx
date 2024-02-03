@@ -2,11 +2,11 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import ProductThumbnail from '.';
 
-const meta = {
+const meta: Meta<typeof ProductThumbnail> = {
   component: ProductThumbnail,
-  title: 'Components/Product View/Product Thumbnail',
+  title: 'Components: Organisms/Product View/Product Thumbnail',
   tags: ['autodocs'],
-} satisfies Meta<typeof ProductThumbnail>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

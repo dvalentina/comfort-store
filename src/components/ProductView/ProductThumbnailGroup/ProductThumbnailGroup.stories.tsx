@@ -3,11 +3,11 @@ import { useState } from 'react';
 
 import ProductThumbnailGroup from '.';
 
-const meta = {
+const meta: Meta<typeof ProductThumbnailGroup> = {
   component: ProductThumbnailGroup,
-  title: 'Components/Product View/Product Thumbnail Group',
+  title: 'Components: Organisms/Product View/Product Thumbnail Group',
   tags: ['autodocs'],
-} satisfies Meta<typeof ProductThumbnailGroup>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

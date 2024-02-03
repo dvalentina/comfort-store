@@ -2,11 +2,10 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { useEffect, useState } from 'react';
 
 import Counter from '.';
-import { ICounter } from '.';
 
 const meta: Meta<typeof Counter> = {
   component: Counter,
-  title: 'Components/Counter',
+  title: 'Components: Molecules/Counter',
   tags: ['autodocs'],
 };
 

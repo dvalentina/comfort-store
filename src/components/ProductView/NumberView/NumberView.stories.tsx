@@ -2,11 +2,11 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import NumberView from '.';
 
-const meta = {
+const meta: Meta<typeof NumberView> = {
   component: NumberView,
-  title: 'Components/Product View/Number View',
+  title: 'Components: Organisms/Product View/Number View',
   tags: ['autodocs'],
-} satisfies Meta<typeof NumberView>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

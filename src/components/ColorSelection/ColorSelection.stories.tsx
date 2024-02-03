@@ -5,7 +5,7 @@ import ColorSelection from '.';
 
 const meta: Meta<typeof ColorSelection> = {
   component: ColorSelection,
-  title: 'Components/Color Selection',
+  title: 'Components: Molecules/Color Selection',
   tags: ['autodocs'],
   decorators: [
     (Story) => (

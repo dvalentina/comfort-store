@@ -1,0 +1,97 @@
+@use '/src/styles/colors';
+
+.tooltip-wrapper {
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+
+  .tooltip {
+    $background-color: colors.$white;
+    $border-color: colors.$verdigris;
+
+    position: absolute;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    padding: 6px 8px;
+    background: $background-color;
+    white-space: nowrap;
+    z-index: 1;
+
+    // styles for tooltip arrow
+
+    @mixin arrow-common {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    @mixin border-triangle($direction, $color, $size) {
+      border-color: transparent;
+      border-width: $size;
+
+      @if $direction == up {
+        bottom: 100%;
+        left: calc(50% - $size);
+        border-bottom-color: $color;
+      } @else if $direction == right {
+        left: 100%;
+        top: calc(50% - $size);
+        border-left-color: $color;
+      } @else if $direction == down {
+        top: 100%;
+        left: calc(50% - $size);
+        border-top-color: $color;
+      } @else if $direction == left {
+        right: 100%;
+        top: calc(50% - $size);
+        border-right-color: $color;
+      } @else {
+        @error "Unknown direction #{$direction}.";
+      }
+    }
+
+    @mixin arrow($direction) {
+      ::before {
+        @include arrow-common();
+        @include border-triangle($direction, $border-color, 6px);
+      }
+
+      ::after {
+        @include arrow-common();
+        @include border-triangle($direction, $background-color, 5px);
+      }
+    }
+
+    // modifiers
+
+    &--top {
+      bottom: calc(100% + 6px);
+      left: 50%;
+      transform: translateX(-50%);
+      @include arrow(down);
+    }
+
+    &--right {
+      left: calc(100% + 10px);
+      top: 50%;
+      transform: translateY(-50%);
+      @include arrow(left);
+    }
+
+    &--bottom {
+      top: calc(100% + 6px);
+      left: 50%;
+      transform: translateX(-50%);
+      @include arrow(up);
+    }
+
+    &--left {
+      right: calc(100% + 10px);
+      top: 50%;
+      transform: translateY(-50%);
+      @include arrow(right);
+    }
+  }
+}

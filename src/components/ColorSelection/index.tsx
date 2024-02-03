@@ -1,6 +1,6 @@
 import './styles.scss';
 
-import { useState } from 'react';
+import Tooltip from '../Tooltip';
 
 interface IColorSelection {
   colors: string[];
@@ -18,13 +18,14 @@ function ColorSelection({
   };
 
   const colorItems = colors.map((color) => (
-    <div
-      className={`item item--${color} ${
-        color === activeColor ? 'item--active' : ''
-      }`}
-      onClick={() => handleChoose(color)}
-      key={color}
-    />
+    <Tooltip text={color} key={color}>
+      <div
+        className={`item item--${color} ${
+          color === activeColor ? 'item--active' : ''
+        }`}
+        onClick={() => handleChoose(color)}
+      />
+    </Tooltip>
   ));
 
   return <div className='color-selection'>{colorItems}</div>;

@@ -3,11 +3,18 @@ import { useState } from 'react';
 
 import ColorSelection from '.';
 
-const meta = {
+const meta: Meta<typeof ColorSelection> = {
   component: ColorSelection,
   title: 'Components/Color Selection',
   tags: ['autodocs'],
-} satisfies Meta<typeof ColorSelection>;
+  decorators: [
+    (Story) => (
+      <div style={{ marginBottom: '20px' }}>
+        <Story />
+      </div>
+    ),
+  ],
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

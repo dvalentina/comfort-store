@@ -1,0 +1,9 @@
+@use '/src/styles/base';
+
+.breadcrumb-item {
+  list-style-type: none;
+
+  .link {
+    @include base.reset-link;
+  }
+}

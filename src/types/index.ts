@@ -7,6 +7,7 @@ export interface IItem {
   priceUSD: number;
   colors: string[];
   tags: string[];
+  bonuses: string[];
   sale: boolean;
   salePriceUSD?: number;
 }

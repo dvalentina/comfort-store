@@ -19,9 +19,7 @@ function ItemPage({ params }: { params: { id: string } }) {
         <h1 className='item-title item-page__item-title'>{item.name}</h1>
         <h4 className='item-price'>${item.priceUSD}</h4>
         <p className='item-description'>{item.description}</p>
-        <p className='item-shipping'>
-          Free 3-5 day shipping • Tool-free assembly • 30-day trial
-        </p>
+        <p className='item-shipping'>{item.bonuses.join(' • ')}</p>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import { DATABASE_URL } from '@/constants';
-import { IItem } from '@/types';
+import { IProduct } from '@/types';
 
 export const dynamic = 'force-dynamic';
 
@@ -12,7 +12,7 @@ export async function GET(
   const res = await fetch(DATABASE_URL);
   const data = await res.json();
 
-  const item = data.find((item: IItem) => item.id === parseInt(id));
+  const product = data.find((product: IProduct) => product.id === parseInt(id));
 
-  return Response.json(item);
+  return Response.json(product);
 }

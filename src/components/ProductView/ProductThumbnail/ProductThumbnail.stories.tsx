@@ -14,7 +14,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     active: true,
-    imageURL: '/items/wooden_speaker_1.jpg',
+    imageURL: '/products/wooden_speaker_1.jpg',
     handleClick: () => {},
   },
 };

@@ -34,13 +34,13 @@ const ProductThumbnailGroupWithHooks = ({
 
 export const Default: Story = {
   args: {
-    activeImageURL: '/items/wooden_speaker_1.jpg',
+    activeImageURL: '/products/wooden_speaker_1.jpg',
     imageURLs: [
-      '/items/wooden_speaker_1.jpg',
-      '/items/wooden_speaker_2.jpg',
-      '/items/wooden_speaker_3.jpg',
-      '/items/wooden_speaker_4.jpg',
-      '/items/wooden_speaker_5.jpg',
+      '/products/wooden_speaker_1.jpg',
+      '/products/wooden_speaker_2.jpg',
+      '/products/wooden_speaker_3.jpg',
+      '/products/wooden_speaker_4.jpg',
+      '/products/wooden_speaker_5.jpg',
     ],
     handleChange: () => {},
   },

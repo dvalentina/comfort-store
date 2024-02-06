@@ -5,10 +5,10 @@ function APIHome() {
       <h3>Available routes:</h3>
       <ul>
         <li>
-          <a href='api/items'>/api/items</a>
+          <a href='api/products'>/api/products</a>
         </li>
         <li>
-          <a href='api/items/1'>/api/items/:id</a>
+          <a href='api/products/1'>/api/products/:id</a>
         </li>
       </ul>
     </>

@@ -82,7 +82,8 @@
 
   &--no-label#{&}--link {
     padding: 2px;
-    width: auto;
+    width: fit-content;
+    height: fit-content;
   }
 
   .button-label {

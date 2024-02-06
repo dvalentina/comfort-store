@@ -59,8 +59,16 @@
     border-left: 1px solid colors.$french-grey;
     box-sizing: border-box;
 
+    cursor: not-allowed;
+
     &__icon {
       color: colors.$space-cadet;
+    }
+
+    .tooltip-wrapper {
+      height: 100%;
+      width: 100%;
+      @include base.flex-center;
     }
   }
 }

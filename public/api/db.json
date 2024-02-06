@@ -14,7 +14,7 @@
     "priceUSD": 119.99,
     "colors": ["brown"],
     "tags": ["tech"],
-    "bonuses": ["Free 3-5 day shipping", "Tool-free assembly", "30-day trial"],
+    "bonuses": ["Free 3-5 day shipping", "30-day trial"],
     "sale": false,
     "salePriceUSD": null
   }

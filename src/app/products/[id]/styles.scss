@@ -2,6 +2,8 @@
 @use 'src/styles/colors';
 
 .product-page {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
 
@@ -12,27 +14,42 @@
   &__right {
   }
 
-  &__product-title {
-    margin-top: 0;
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
   }
 
-  .product-title {
-    @include typography.headline-large;
-    color: colors.$space-cadet;
+  &__title-zone {
+    margin-top: 76px;
+    margin-bottom: 48px;
   }
 
-  .product-price {
-    @include typography.title-medium;
-    color: colors.$space-cadet;
+  .title-zone {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
 
-  .product-description {
-    @include typography.body-large;
-    color: colors.$space-cadet;
+  .description-zone {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
   }
 
-  .product-bonuses {
-    @include typography.body-large;
-    color: colors.$space-cadet;
+  .product-add-to-cart {
+    display: flex;
+    gap: 24px;
+  }
+
+  .rectangle {
+    position: fixed;
+    right: 0;
+    top: 330px;
+    height: 250px;
+    width: 440px;
+    background: linear-gradient(to left, colors.$verdigris 25%, colors.$white);
+    opacity: 0.1;
+    z-index: -1;
   }
 }

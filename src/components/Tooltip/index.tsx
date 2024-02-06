@@ -1,3 +1,5 @@
+'use client';
+
 import './styles.scss';
 
 import { useState } from 'react';

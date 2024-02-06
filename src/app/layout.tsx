@@ -21,7 +21,7 @@ export default function RootLayout({
           <div className='grid__header'>
             <Header />
           </div>
-          <div className='grid__body'>{children}</div>
+          <div className='body grid__body'>{children}</div>
         </div>
       </body>
     </html>

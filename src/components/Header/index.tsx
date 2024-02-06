@@ -3,6 +3,8 @@ import './styles.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import Tooltip from '../Tooltip';
+
 function Header() {
   return (
     <div className='header'>
@@ -17,15 +19,17 @@ function Header() {
           About
         </Link>
       </div>
-      <Link href='/cart' className='cart header__cart'>
-        <Image
-          src='/assets/icons/shopping-cart.svg'
-          alt='shopping cart'
-          width={24}
-          height={24}
-          className='cart__icon'
-        />
-      </Link>
+      <div className='header__cart cart'>
+        <Tooltip text='Coming soon!' position='left'>
+          <Image
+            src='/assets/icons/shopping-cart.svg'
+            alt='shopping cart'
+            width={24}
+            height={24}
+            className='cart__icon'
+          />
+        </Tooltip>
+      </div>
     </div>
   );
 }

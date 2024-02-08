@@ -1,0 +1,19 @@
+import { Story, Meta } from '@storybook/blocks';
+
+import * as SkeletonStories from './Skeleton.stories';
+// import './styles.scss';
+
+<Meta of={SkeletonStories} />
+
+# Skeleton
+
+A placeholder component for a loading state.
+
+<div style={{ display: 'flex', gap: '48px' }}>
+  <Story of={SkeletonStories.VerticalBlock} />
+  <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+    <Story of={SkeletonStories.HeadlineLarge} />
+    <Story of={SkeletonStories.TitleMedium} />
+    <Story of={SkeletonStories.HorizontalBlock} />
+  </div>
+</div>

@@ -1,0 +1,63 @@
+@use '/src/styles/colors';
+
+.skeleton {
+  height: 100%;
+  width: 100%;
+  background: lighten(colors.$french-grey, 10);
+  border-radius: 4px;
+  animation: skeleton-pulse 2.5s infinite;
+
+  &__children {
+    visibility: hidden;
+  }
+
+  &--loading {
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      opacity: 0.5;
+      content: '';
+      width: 100vw;
+      height: 200vw;
+      transform-origin: 0;
+      transform: translate3d(-50%, -50%, 0);
+      background-color: transparent;
+      background-image: linear-gradient(
+        -50deg,
+        transparent 40%,
+        colors.$white,
+        transparent 60%,
+        transparent 100%
+      );
+      background-repeat: no-repeat;
+      transition: all 1s ease-in-out;
+      animation: skeleton-loading 4s linear infinite;
+      z-index: 100;
+    }
+  }
+
+  @keyframes skeleton-loading {
+    from {
+      transform: translate3d(-50%, -200%, 0);
+    }
+    to {
+      transform: translate3d(-50%, 100%, 0);
+    }
+  }
+
+  @keyframes skeleton-pulse {
+    0%,
+    100% {
+      background: lighten(colors.$french-grey, 10);
+    }
+    50% {
+      background: lighten(colors.$french-grey, 7);
+    }
+  }
+}

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import Tooltip from '../Tooltip';
+import Typography from '../Typography';
 
 function Header() {
   return (
@@ -13,10 +14,14 @@ function Header() {
       </Link>
       <div className='header__links'>
         <Link className='link' href='/'>
-          Shop
+          <Typography type='label' size='small' role='span'>
+            Shop
+          </Typography>
         </Link>
         <Link className='link' href='/about'>
-          About
+          <Typography type='label' size='small' role='span'>
+            About
+          </Typography>
         </Link>
       </div>
       <div className='header__cart cart'>

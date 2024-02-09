@@ -2,6 +2,8 @@ import './styles.scss';
 
 import { useEffect } from 'react';
 
+import Typography from '@/components/Typography';
+
 import { ReactComponent as MinusIcon } from '../../../public/assets/icons/minus.svg';
 import { ReactComponent as PlusIcon } from '../../../public/assets/icons/plus.svg';
 
@@ -57,9 +59,13 @@ function Counter({
       >
         <MinusIcon className='icon-button__icon' />
       </button>
-      <p className={`count ${counterDisabled ? 'count--disabled' : ''}`}>
+      <Typography
+        type='label'
+        size='large'
+        color={counterDisabled ? 'secondary' : 'primary'}
+      >
         {count}
-      </p>
+      </Typography>
       <button
         className='icon-button'
         onClick={handleIncrement}

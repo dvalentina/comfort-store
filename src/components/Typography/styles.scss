@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 @use '/src/styles/typography';
 @use '/src/styles/colors';
 
@@ -8,78 +10,78 @@
   font-family: typography.$poppins;
 
   &__headline {
-    font-weight: typography.$bold;
+    font-weight: map.get(typography.$font-weights, 'bold');
 
     &--large {
-      font-size: 44px;
-      line-height: 56px;
+      font-size: map.get(typography.$font-sizes, 'headline-large');
+      line-height: map.get(typography.$line-heights, 'headline-large');
     }
 
     &--medium {
-      font-size: 32px;
-      line-height: 44px;
+      font-size: map.get(typography.$font-sizes, 'headline-medium');
+      line-height: map.get(typography.$line-heights, 'headline-medium');
     }
 
     &--small {
-      font-size: 24px;
-      line-height: 32px;
+      font-size: map.get(typography.$font-sizes, 'headline-small');
+      line-height: map.get(typography.$line-heights, 'headline-small');
     }
   }
 
   &__title {
-    font-weight: typography.$semi-bold;
+    font-weight: map.get(typography.$font-weights, 'semi-bold');
 
     &--large {
-      font-size: 34px;
-      line-height: 40px;
+      font-size: map.get(typography.$font-sizes, 'title-large');
+      line-height: map.get(typography.$line-heights, 'title-large');
     }
 
     &--medium {
-      font-size: 24px;
-      line-height: 32px;
+      font-size: map.get(typography.$font-sizes, 'title-medium');
+      line-height: map.get(typography.$line-heights, 'title-medium');
     }
 
     &--small {
-      font-size: 20px;
-      line-height: 24px;
+      font-size: map.get(typography.$font-sizes, 'title-small');
+      line-height: map.get(typography.$line-heights, 'title-small');
     }
   }
 
   &__label {
-    font-weight: typography.$semi-bold;
+    font-weight: map.get(typography.$font-weights, 'semi-bold');
 
     &--large {
-      font-size: 20px;
-      line-height: 24px;
+      font-size: map.get(typography.$font-sizes, 'label-large');
+      line-height: map.get(typography.$line-heights, 'label-large');
     }
 
     &--medium {
-      font-size: 16px;
-      line-height: 20px;
+      font-size: map.get(typography.$font-sizes, 'label-medium');
+      line-height: map.get(typography.$line-heights, 'label-medium');
     }
 
     &--small {
-      font-size: 14px;
-      line-height: 16px;
+      font-size: map.get(typography.$font-sizes, 'label-small');
+      line-height: map.get(typography.$line-heights, 'label-small');
     }
   }
 
   &__body {
-    font-weight: typography.$regular;
+    font-weight: map.get(typography.$font-weights, 'regular');
 
     &--large {
-      font-size: 16px;
-      line-height: 24px;
+      font-size: map.get(typography.$font-sizes, 'body-large');
+      line-height: map.get(typography.$line-heights, 'body-large');
     }
 
     &--medium {
-      font-size: 14px;
-      line-height: 20px;
+      font-size: map.get(typography.$font-sizes, 'body-medium');
+      line-height: map.get(typography.$line-heights, 'body-medium');
     }
 
     &--small {
-      font-size: 12px;
-      line-height: 16px;
+      font-size: map.get(typography.$font-sizes, 'body-small');
+      line-height: map.get(typography.$line-heights, 'body-small');
     }
   }
 

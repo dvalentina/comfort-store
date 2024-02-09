@@ -13,15 +13,6 @@
   box-sizing: border-box;
   padding: 16px;
 
-  .count {
-    @include typography.label-large;
-    color: colors.$space-cadet;
-
-    &--disabled {
-      color: colors.$cool-grey;
-    }
-  }
-
   .icon-button {
     @include base.reset-button;
     @include base.flex-center;

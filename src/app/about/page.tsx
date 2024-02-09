@@ -2,6 +2,8 @@ import './styles.scss';
 
 import Image from 'next/image';
 
+import Typography from '@/components/Typography';
+
 function AboutPage() {
   return (
     <div className='about'>
@@ -13,12 +15,14 @@ function AboutPage() {
           className='image'
         />
       </div>
-      <div>
-        <h1 className='headline'>About Comfort Store</h1>
-        <p className='text'>
+      <div className='about__right'>
+        <Typography role='h1' type='headline' size='large'>
+          About Comfort Store
+        </Typography>
+        <Typography type='body' size='large'>
           Hello! I developed this e-commerce application as a pet project.
-        </p>
-        <p className='text'>
+        </Typography>
+        <Typography type='body' size='large'>
           To learn more about its features, the technologies I used or to view
           the source code, visit{' '}
           <a
@@ -29,9 +33,11 @@ function AboutPage() {
           >
             its page on GitHub.
           </a>
-        </p>
-        <h2 className='title'>Contacts</h2>
-        <p className='text'>
+        </Typography>
+        <Typography role='h2' type='title' size='large'>
+          Contacts
+        </Typography>
+        <Typography type='body' size='large'>
           <b>LinkedIn:</b>{' '}
           <a
             href='https://www.linkedin.com/in/dvalentina'
@@ -41,8 +47,8 @@ function AboutPage() {
           >
             @dvalentina
           </a>
-        </p>
-        <p className='text'>
+        </Typography>
+        <Typography type='body' size='large'>
           <b>Telegram:</b>{' '}
           <a
             href='https://t.me/danilova_v_v'
@@ -52,8 +58,8 @@ function AboutPage() {
           >
             @danilova_v_v
           </a>
-        </p>
-        <p className='text'>
+        </Typography>
+        <Typography type='body' size='large'>
           <b>GitHub:</b>{' '}
           <a
             href='https://github.com/dvalentina'
@@ -63,10 +69,10 @@ function AboutPage() {
           >
             @dvalentina
           </a>
-        </p>
-        <p className='text'>
+        </Typography>
+        <Typography type='body' size='large'>
           <b>E-mail:</b> danilova.vv@phystech.edu
-        </p>
+        </Typography>
       </div>
     </div>
   );

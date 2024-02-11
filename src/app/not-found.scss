@@ -1,0 +1,44 @@
+@use '/src/styles/base';
+@use '/src/styles/colors';
+
+.not-found {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__link {
+    @include base.reset-link;
+    margin-top: 24px;
+  }
+
+  .link {
+    width: fit-content;
+  }
+
+  &__error-number {
+    @include base.flex-center;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .error-number {
+    @include base.flex-center;
+    width: 100%;
+    height: 100%;
+
+    .typography {
+      font-size: 750px;
+      color: rgba(colors.$space-cadet, 0.04);
+      line-height: 100%;
+    }
+  }
+}

@@ -18,11 +18,12 @@ body {
 
   &__body {
     grid-area: body;
+    grid-template-columns: 1fr;
     margin: 0 auto;
   }
 
   .body {
-    max-width: 1440px;
+    width: 1440px;
     padding: 54px 80px;
   }
 }

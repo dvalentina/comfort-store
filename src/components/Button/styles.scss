@@ -21,11 +21,11 @@
     background: colors.$verdigris;
     color: colors.$white;
 
-    &:enabled:hover {
+    &:not(:disabled):hover {
       background: darken(colors.$verdigris, 5);
     }
 
-    &:enabled:active {
+    &:not(:disabled):active {
       background: darken(colors.$verdigris, 10);
     }
 
@@ -40,11 +40,11 @@
     color: colors.$space-cadet;
     background: colors.$white;
 
-    &:enabled:hover {
+    &:not(:disabled):hover {
       background: darken(colors.$white, 5);
     }
 
-    &:enabled:active {
+    &:not(:disabled):active {
       background: darken(colors.$white, 10);
     }
 
@@ -59,11 +59,11 @@
     padding: 2px 4px;
     color: colors.$verdigris;
 
-    &:enabled:hover {
+    &:not(:disabled):hover {
       background: darken(colors.$white, 5);
     }
 
-    &:enabled:active {
+    &:not(:disabled):active {
       background: darken(colors.$white, 10);
     }
 

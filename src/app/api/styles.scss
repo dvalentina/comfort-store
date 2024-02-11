@@ -1,0 +1,11 @@
+@use '/src/styles/colors';
+
+.api-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  li::marker {
+    color: colors.$space-cadet;
+  }
+}

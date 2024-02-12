@@ -1,0 +1,13 @@
+.button-stories {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  align-items: center;
+  gap: 20px;
+
+  &-canvas {
+    .innerZoomElementWrapper {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+import { Canvas, Story, Meta } from '@storybook/blocks';
+
+import * as ButtonStories from './Button.stories';
+import './styles.scss';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+<Canvas of={ButtonStories.Default} />
+
+# Variants
+
+<Canvas of={ButtonStories.Variants} />
+
+# Disabled
+
+<Canvas of={ButtonStories.Disabled} />
+
+# With Icons
+
+<Canvas className='button-stories-canvas'>
+  <Story of={ButtonStories.IconLeading} />
+  <Story of={ButtonStories.IconTrailing} />
+  <Story of={ButtonStories.IconOnly} />
+</Canvas>
+
+# Full Width
+
+<Canvas>
+  <Story of={ButtonStories.FilledFullWidth} />
+</Canvas>

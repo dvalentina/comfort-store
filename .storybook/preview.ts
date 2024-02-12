@@ -11,7 +11,13 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['Tokens', 'Components: Atoms', 'Components: Molecules'],
+        order: [
+          'Introduction',
+          'Tokens',
+          'Components: Atoms',
+          'Components: Molecules',
+          'Components: Organisms',
+        ],
       },
     },
   },

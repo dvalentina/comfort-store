@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![SASS/SCSS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
-## Getting Started
+# Comfort Store
 
-First, run the development server:
+It is an eCommence application developed as a pet project.
+> :bulb: Comfort Store is **deployed**! Follow the link: **https://comfort-store-xi.vercel.app**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![Comfort Store Demo](comfort-store-demo.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- There is a [Product Page](https://comfort-store-xi.vercel.app/products/1) with interactive view of product's photos.
+- Information about a product is fetched from a server. Read more [in this section](#backend).
+- Components are documented in Storybook. Read more [in this section](#storybook).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This application in deployed at Vercel, you can explore it here: https://comfort-store-xi.vercel.app
 
-## Learn More
+## Storybook
 
-To learn more about Next.js, take a look at the following resources:
+The components of this appication were developed in isolation and documented using Storybook!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+You can explore documentation here:
+https://comfort-store-storybook.vercel.app/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+[![Storybook Demo](storybook-demo.png)](https://comfort-store-storybook.vercel.app/?path=/docs/components-organisms-product-view--docs)
 
-## Deploy on Vercel
+## Backend
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The backend server is built using Next.js and uses a .json file as a database.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Its endpoints: https://comfort-store-xi.vercel.app/api/
+
+## Tools&Technologies
+
+Main technologies:
+- **[Next.js](https://nextjs.org/)** [(React)](https://react.dev/)
+- **[TypeScript](https://www.typescriptlang.org/)**
+- **[SASS/SCSS](https://sass-lang.com/)**
+
+I have also used:
+- [SWR](https://swr.vercel.app/) for data fetching
+- [Storybook](https://storybook.js.org/) for documentation
+- [Vercel](https://vercel.com/) for deploy
+- [Eslint](https://eslint.org/) & [Prettier](https://prettier.io/) for code linting and formatting
+- [npm](https://docs.npmjs.com/about-npm) as a package manager
+- [Node.js](https://nodejs.org/en) as a runtime environment
+- [git](https://git-scm.com/) & [GitHub](https://github.com/) for version control
+
+## Sources
+
+- **Design** is based on [Furniture Store | E-commerce Freebie](https://www.figma.com/community/file/1208280589750649537/furniture-store-e-commerce-freebie?searchSessionId=lsirmycq-x512xe3y3pj) by **[Huzefa Bagwala](https://www.figma.com/@huzefab)** on Figma Community
+- The products' **photos** used in this application are by **[Behnam Norouzi](https://unsplash.com/@behy_studio)** on Unsplash

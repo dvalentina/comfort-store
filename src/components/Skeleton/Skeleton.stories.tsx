@@ -37,9 +37,11 @@ export const HorizontalBlock: Story = {
   },
 };
 
-export const VerticalBlock: Story = {
+export const ImageBlock: Story = {
   args: {
     height: '400px',
     width: '300px',
+    image: true,
+    iconSize: 'large',
   },
 };

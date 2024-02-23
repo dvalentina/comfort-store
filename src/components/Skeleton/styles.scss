@@ -1,6 +1,8 @@
 @use '/src/styles/colors';
+@use '/src/styles/base';
 
 .skeleton {
+  @include base.flex-center;
   height: 100%;
   width: 100%;
   background: lighten(colors.$french-grey, 10);
@@ -39,6 +41,24 @@
       transition: all 1s ease-in-out;
       animation: skeleton-loading 4s linear infinite;
       z-index: 100;
+    }
+  }
+
+  &-icon {
+    color: rgba(colors.$space-cadet, 0.25);
+
+    &--small {
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &--large {
+      svg {
+        width: 52px;
+        height: 52px;
+      }
     }
   }
 

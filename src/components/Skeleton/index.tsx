@@ -9,6 +9,7 @@ interface ISkeleton {
   width?: string;
   image?: boolean;
   iconSize?: 'small' | 'large';
+  className?: string;
 }
 
 function Skeleton({
@@ -18,11 +19,14 @@ function Skeleton({
   width,
   image = false,
   iconSize = 'small',
+  className,
 }: ISkeleton) {
   if (loading) {
     return (
       <div
-        className={`skeleton ${image ? '' : 'skeleton--loading'} `}
+        className={`skeleton ${image ? '' : 'skeleton--loading'} ${
+          className ? className : ''
+        }`}
         style={{ height: height, width: width }}
       >
         {image ? (

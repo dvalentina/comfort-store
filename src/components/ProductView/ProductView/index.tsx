@@ -1,8 +1,9 @@
 import './styles.scss';
 
-import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
+import ImageWithLoader from '@/components/ImageWithLoader';
+import Skeleton from '@/components/Skeleton';
 import { API_URL } from '@/constants';
 
 import Arrows from '../Arrows';
@@ -65,6 +66,10 @@ function ProductView({ imageURLs }: { imageURLs: string[] }) {
     }
   }, [activeIndex, canScroll]);
 
+  useEffect(() => {
+    setActiveImageURL(imageURLs[0]);
+  }, [imageURLs]);
+
   return (
     <div className='product-view' ref={viewRef}>
       <div className='image-number product-view__image-number'>
@@ -79,13 +84,18 @@ function ProductView({ imageURLs }: { imageURLs: string[] }) {
         ) : null}
       </div>
       <div className='image product-view__image'>
-        <Image
-          src={`${API_URL}${activeImageURL}`}
-          alt={'product preview'}
-          fill
-          sizes='840px'
-          priority
-        />
+        {activeImageURL ? (
+          <ImageWithLoader
+            src={`${API_URL}${activeImageURL}`}
+            alt={'product preview'}
+            fill
+            sizes='840px'
+            priority
+            iconSize='large'
+          />
+        ) : (
+          <Skeleton image iconSize='large' className='skeleton' />
+        )}
       </div>
       <ProductThumbnailGroup
         imageURLs={imageURLs}

@@ -1,6 +1,8 @@
 @use '/src/styles/colors';
 
 .product-thumbnail {
+  display: flex;
+  justify-content: center;
   height: 104px;
   width: 104px;
   box-sizing: border-box;
@@ -15,7 +17,13 @@
   }
 
   .image {
-    object-fit: contain;
+    .skeleton {
+      width: 70% !important;
+    }
+  }
+
+  .skeleton {
+    border-radius: 0;
   }
 
   &--active {

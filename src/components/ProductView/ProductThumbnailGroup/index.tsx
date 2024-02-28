@@ -19,14 +19,23 @@ function ProductThumbnailGroup({
 
   return (
     <div className='product-thumbnail-group'>
-      {imageURLs.map((imageURL, index) => (
-        <ProductThumbnail
-          active={imageURL === activeImageURL}
-          imageURL={imageURL}
-          handleClick={handleThumbnailClick}
-          key={index}
-        />
-      ))}
+      {imageURLs.length > 0
+        ? imageURLs.map((imageURL, index) => (
+            <ProductThumbnail
+              active={imageURL === activeImageURL}
+              imageURL={imageURL}
+              handleClick={handleThumbnailClick}
+              key={index}
+            />
+          ))
+        : [...Array(3)].map((element, index) => (
+            <ProductThumbnail
+              active={false}
+              imageURL=''
+              handleClick={() => {}}
+              key={index}
+            />
+          ))}
     </div>
   );
 }

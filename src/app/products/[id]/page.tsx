@@ -10,6 +10,7 @@ import Button from '@/components/Button';
 import ColorSelection from '@/components/ColorSelection';
 import Counter from '@/components/Counter';
 import ProductView from '@/components/ProductView/ProductView';
+import Skeleton from '@/components/Skeleton';
 import Tooltip from '@/components/Tooltip';
 import Typography from '@/components/Typography';
 import useProduct from '@/hooks/useProduct';
@@ -41,16 +42,19 @@ function ProductPage({ params }: { params: { id: string } }) {
     }
   }, [product]);
 
-  if (!product) {
-    return <p>loading...</p>;
+  if (isError) {
+    console.log(isError);
+    return <Typography>Some error occured</Typography>;
   }
 
-  const breadcrumbItems: IBreadcrumbItem[] = [
-    {
-      text: capitalizeFirstLetter(product.tags[0]),
-    },
-    { text: product.name },
-  ];
+  const breadcrumbItems: IBreadcrumbItem[] = product
+    ? [
+        {
+          text: capitalizeFirstLetter(product.tags[0]),
+        },
+        { text: product.name },
+      ]
+    : [];
 
   const productViewRect = productViewRef.current?.getBoundingClientRect();
   if (productViewRect && rectangleRef.current) {
@@ -65,42 +69,67 @@ function ProductPage({ params }: { params: { id: string } }) {
       <div className='product-page__left'>
         <div className='navigation'>
           <Button variant='link' iconLeading={<BackIcon />} disabled />
-          <Breadcrumbs items={breadcrumbItems} />
+          {product ? (
+            <Breadcrumbs items={breadcrumbItems} />
+          ) : (
+            <Skeleton width='100%' height='16px' />
+          )}
         </div>
         <div className='title-zone product-page__title-zone'>
-          <Typography type='headline' size='large'>
-            {product.name}
-          </Typography>
-          <Typography type='title' size='medium'>
-            ${product.priceUSD}
-          </Typography>
+          {product ? (
+            <Typography type='headline' size='large'>
+              {product.name}
+            </Typography>
+          ) : (
+            <Skeleton width='100%' height='56px' />
+          )}
+          {product ? (
+            <Typography type='title' size='medium'>
+              ${product.priceUSD}
+            </Typography>
+          ) : (
+            <Skeleton width='30%' height='32px' />
+          )}
         </div>
         <div className='description-zone'>
-          <Typography type='body' size='large'>
-            {product.description}
-          </Typography>
-          <ColorSelection
-            colors={product.colors}
-            activeColor={chosenColor}
-            handleChange={handleChooseColor}
-          />
+          {product ? (
+            <Typography type='body' size='large'>
+              {product.description}
+            </Typography>
+          ) : (
+            <Skeleton width='100%' height='100px' />
+          )}
+          {product ? (
+            <ColorSelection
+              colors={product.colors}
+              activeColor={chosenColor}
+              handleChange={handleChooseColor}
+            />
+          ) : (
+            <Skeleton width='50%' height='28px' />
+          )}
           <div className='product-add-to-cart'>
             <Counter
-              count={quantity}
-              maxCount={product.available_qty}
+              count={product ? quantity : 1}
+              maxCount={product ? product.available_qty : 1}
               handleChange={handleChangeQuantity}
+              disabled={!product}
             />
             <Tooltip text='Coming soon!' position='right'>
               <Button label='Add to Cart' disabled />
             </Tooltip>
           </div>
-          <Typography type='body' size='large'>
-            {product.bonuses.join(' • ')}
-          </Typography>
+          {product ? (
+            <Typography type='body' size='large'>
+              {product.bonuses.join(' • ')}
+            </Typography>
+          ) : (
+            <Skeleton width='100%' height='24px' />
+          )}
         </div>
       </div>
       <div className='product-page__right' ref={productViewRef}>
-        <ProductView imageURLs={product.images} />
+        <ProductView imageURLs={product ? product.images : []} />
         <div className='rectangle' ref={rectangleRef} />
       </div>
     </div>

@@ -1,0 +1,33 @@
+.image-with-loader {
+  position: relative;
+
+  &__image {
+    object-fit: contain;
+
+    &--visible {
+      visibility: visible;
+    }
+
+    &--hidden {
+      visibility: hidden;
+    }
+  }
+
+  &__skeleton {
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    &--visible {
+      display: flex;
+    }
+
+    &--hidden {
+      display: none;
+    }
+
+    .skeleton {
+      border-radius: 0;
+    }
+  }
+}

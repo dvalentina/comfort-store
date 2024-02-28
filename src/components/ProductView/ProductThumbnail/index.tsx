@@ -2,8 +2,8 @@
 
 import './styles.scss';
 
-import Image from 'next/image';
-
+import ImageWithLoader from '@/components/ImageWithLoader';
+import Skeleton from '@/components/Skeleton';
 import { API_URL } from '@/constants';
 
 interface IProductThumbnail {
@@ -24,13 +24,17 @@ function ProductThumbnail({
       }`}
       onClick={() => handleClick(imageURL)}
     >
-      <Image
-        src={`${API_URL}${imageURL}`}
-        alt='thumbnail'
-        fill
-        className='image'
-        sizes='104px'
-      />
+      {imageURL ? (
+        <ImageWithLoader
+          src={`${API_URL}${imageURL}`}
+          alt='thumbnail'
+          fill
+          className='image'
+          sizes='104px'
+        />
+      ) : (
+        <Skeleton image width='70%' height='100%' className='skeleton' />
+      )}
     </div>
   );
 }

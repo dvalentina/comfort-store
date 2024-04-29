@@ -23,9 +23,11 @@ function ProductView({ imageURLs }: { imageURLs: string[] }) {
 
   const handleClickNext = () => {
     const incrementedIndex = activeIndex + 1;
-    const nextIndex = incrementedIndex % imageURLs.length;
-    setActiveIndex(nextIndex);
-    setActiveImageURL(imageURLs[nextIndex]);
+    if (imageURLs.length > 0) {
+      const nextIndex = incrementedIndex % imageURLs.length;
+      setActiveIndex(nextIndex);
+      setActiveImageURL(imageURLs[nextIndex]);
+    }
   };
 
   const handleClickPrevious = () => {
